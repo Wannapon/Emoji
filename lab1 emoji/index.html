@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lab1-Emoji</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body>
+    <div id ="lab">
+
+            <button v-on:click="countlike"><img src="E:\CS494 Selet-topic\img\like.gif" width="100" height="100"></button>
+            like {{count_like}} <br>
+            <button v-on:click="countlove"><img src="E:\CS494 Selet-topic\img\love.gif" width="100" height="100"/></button>
+            love {{count_love}} <br>
+            <button v-on:click="countsmile"><img src="E:\CS494 Selet-topic\img\smile.gif" width="100" height="100"/></button>
+            smile {{count_smile}} <br>
+            <button v-on:click="countwow"><img src="E:\CS494 Selet-topic\img\wow.gif" width="100" height="100"/></button>
+            wow {{count_wow}} <br>
+            <button v-on:click="countsad"><img src="E:\CS494 Selet-topic\img\sad.gif" width="100" height="100"/></button>
+            sad {{count_sad}} <br>
+            <button v-on:click="countangry"><img src="E:\CS494 Selet-topic\img\angry.gif" width="100" height="100"/></button> 
+            angry {{count_angry}} <br>
+
+    </div>
+</body>
+
+</html>
+
+<script>
+    var lab2 = new Vue({
+        el: '#lab' , 
+        data: {
+            studentcode: 'Mju 85' ,
+            url: 'http:///www.cs.mju.cs.th' ,
+            isButtonDisabled: false ,
+            count_like: 0 ,
+            count_love: 0 ,
+            count_smile: 0 ,
+            count_wow: 0 ,
+            count_sad: 0 ,
+            count_angry: 0 
+        },
+        methods:{
+            countlike: function(){
+                this.count_like = this.count_like + 1     
+            },
+            countlove: function(){
+                this.count_love = this.count_love + 1     
+            },
+            countsmile: function(){
+                this.count_smile = this.count_smile + 1     
+            },
+            countwow: function(){
+                this.count_wow = this.count_wow + 1     
+            },
+            countsad: function(){
+                this.count_sad = this.count_sad + 1     
+            },
+            countangry: function(){
+                this.count_angry = this.count_angry + 1     
+            }
+        },
+    })
+</script>
